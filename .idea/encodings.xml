@@ -5,6 +5,5 @@
     <file url="file://$PROJECT_DIR$/www/app/app.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/app/mapa/mapa-controller.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/app/mapa/mapa-services.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/www/app/services/geolocation-service.js" charset="UTF-8" />
   </component>
 </project>
