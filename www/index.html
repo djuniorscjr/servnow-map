@@ -5,12 +5,9 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title></title>
 
-    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
 
-    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <!-- compiled css output -->
     <link href="css/ionic.app.css" rel="stylesheet">
-    -->
 
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
@@ -27,25 +24,53 @@
     <!-- your app's js -->
     <script src="app/app.js"></script>
     <script src="app/mapa/mapa-controller.js"></script>
-    <script src="app/mapa/mapa-services.js"></script>
+    <script src="app/mapa/mapa-service.js"></script>
   </head>
   <body ng-app="servnow-map">
 
     <ion-pane ng-controller="mapaCtrl as mapa">
-      <ion-header-bar class="bar-stable">
-        <h1 class="title">{{ mapa.nameApplication }}</h1>
-      </ion-header-bar>
-      <ion-content class="ng-scope">
+      <ion-header-bar class="bar-assertive" >
+        <h1 class="title">
+          <span>ServNow</span >
+        </h1 >
+      </ion-header-bar >
+      <ion-content scroll="false">
         <map center="{{[mapa.latitude, mapa.longitude]}}" zoom="3">
           <marker position="{{[mapa.latitude, mapa.longitude]}}" icon="img/me-marker.png">
           </marker>
           <info-window id="marker-info">
             <div ng-non-bindable="">
               <div class="contents">
-                <p>assa</p>
-                <p >{{yelp}}</p >
+                <img ng-src="{{mapa.image}}"
+                     alt="" />
+                <h4> Domingos Serviços e Utensilios</h4>
 
+                <p>Lorem</p>
+
+                <div class="row">
+                  <div class="col">
+                    <p class="address">
+                      <i class="ion ion-ios-location"></i>
+                      Rua Canada
+                    </p>
+                  </div>
+                  <div class="col">
+                    <p class="distance">
+                      <i class="ion ion-ios-navigate"></i>
+                      {{12.1 | number:"0"}}m
+                    </p >
+                    <p class="rating">
+                      <i class="ion ion-star"></i>
+                      20
+                      &nbsp;
+                      <i class="ion ion-person"></i>
+                      10
+                    </p>
+                  </div>
                 </div>
+
+                <div class="button button-small button-assertive">Detalhar</div>
+              </div>
             </div >
           </info-window >
         </map>

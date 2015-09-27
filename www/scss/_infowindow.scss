@@ -1,0 +1,45 @@
+.gm-style > div:first-child > div + div > div:last-child > div > div {
+
+	&:last-child {
+		margin-right: 50px;
+		margin-top: 50px;
+		> img {
+			display: none;
+		}
+	}
+	&:first-child > div {
+		background-color: $stable !important;
+		box-shadow: none !important;
+		> div > div {
+			background-color: $stable !important;
+		}
+	}
+}
+
+
+.gm-style-iw {
+  max-width: 240px;
+  .contents {
+    overflow:hidden;
+    img {
+      float: left;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+    .address {
+      color: $positive;
+    }
+    .distance {
+      color: $positive;
+    }
+    .rating {
+      color: $positive;
+    }
+  }
+}
+
+
+.gm-style {
+  //font-family: $font-family-base !important;
+  background-color: $stable;
+}
